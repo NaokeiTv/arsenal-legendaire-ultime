@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:aetherite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:aetherite_helmet",
+    "count": 1
+  }
+}

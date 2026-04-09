@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:draconite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:draconite_chestplate",
+    "count": 1
+  }
+}

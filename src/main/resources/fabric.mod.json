@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "arsenallegendaire",
+  "version": "2.0.0-ULTIMATE",
+  "name": "Arsenal Legendaire : Edition Ultime",
+  "description": "Le mod ultime pour Minecraft ! 15 minerais, 30 armes legendaires, 15 sets d'armures, 8 boss, 4 dimensions, 12 montures...",
+  "authors": ["ArsenalLegendaire Team"],
+  "contact": {
+    "homepage": "https://github.com/ArsenalLegendaire",
+    "sources": "https://github.com/ArsenalLegendaire/Arsenal-Legendaire"
+  },
+  "license": "MIT",
+  "icon": "assets/arsenallegendaire/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.arsenallegendaire.ArsenalLegendaire"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

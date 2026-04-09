@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " /#",
+    "/ #",
+    " /#"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:aetherite_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:aetherite_longbow",
+    "count": 1
+  }
+}

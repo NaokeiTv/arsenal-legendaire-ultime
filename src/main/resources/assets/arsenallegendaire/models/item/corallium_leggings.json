@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "arsenallegendaire:item/armor/corallium_leggings"
+  }
+}

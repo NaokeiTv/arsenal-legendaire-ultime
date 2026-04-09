@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:fulgurite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:fulgurite_leggings",
+    "count": 1
+  }
+}

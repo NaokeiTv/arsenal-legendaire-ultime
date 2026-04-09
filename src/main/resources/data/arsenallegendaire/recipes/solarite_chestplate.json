@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:solarite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:solarite_chestplate",
+    "count": 1
+  }
+}

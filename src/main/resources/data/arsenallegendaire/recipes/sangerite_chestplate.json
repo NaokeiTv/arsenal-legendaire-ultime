@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:sangerite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:sangerite_chestplate",
+    "count": 1
+  }
+}

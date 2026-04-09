@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:necrotite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:necrotite_chestplate",
+    "count": 1
+  }
+}

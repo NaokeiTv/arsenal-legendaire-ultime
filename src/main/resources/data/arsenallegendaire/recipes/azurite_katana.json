@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  #",
+    " # ",
+    "/  "
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:azurite_ingot"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:azurite_katana",
+    "count": 1
+  }
+}

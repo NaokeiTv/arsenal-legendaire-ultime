@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:ombralithe_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:ombralithe_helmet",
+    "count": 1
+  }
+}

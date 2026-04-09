@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "arsenallegendaire:lunarite_ingot"
+    }
+  },
+  "result": {
+    "id": "arsenallegendaire:lunarite_chestplate",
+    "count": 1
+  }
+}
