@@ -48,3 +48,15 @@ jar {
         ])
     }
 }
+jar {
+    manifest {
+        attributes(
+            'Implementation-Title': 'Arsenal Legendaire',
+            'Implementation-Version': project.version
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
