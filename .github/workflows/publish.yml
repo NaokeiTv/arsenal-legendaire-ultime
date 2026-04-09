@@ -19,6 +19,9 @@ jobs:
       - name: 📥 Checkout code
         uses: actions/checkout@v4
 
+      - name: 🔑 Make gradlew executable
+        run: chmod +x gradlew
+
       - name: ☕ Setup Java
         uses: actions/setup-java@v4
         with:
@@ -41,18 +44,14 @@ jobs:
       - name: 🌐 Publish to Modrinth & CurseForge
         uses: Kir-Antipov/mc-publish@v3.3
         with:
-          # Modrinth
           modrinth-id: '3dAnWv1a'
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           
-          # CurseForge
           curseforge-id: '1509449'
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
           
-          # GitHub
           github-token: ${{ secrets.GITHUB_TOKEN }}
           
-          # Informations de version
           name: 'Arsenal Légendaire Ultime ${{ github.ref_name }}'
           version: '${{ github.ref_name }}'
           version-type: 'release'
