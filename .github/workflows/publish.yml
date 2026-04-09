@@ -1,0 +1,78 @@
+name: 🚀 Publish to CurseForge & Modrinth
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+env:
+  MINECRAFT_VERSION: 1.21.1
+  JAVA_VERSION: 21
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+
+      - name: ☕ Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: 🛠️ Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: 🔨 Build mod
+        run: ./gradlew build
+
+      - name: 📦 Find JAR file
+        id: find-jar
+        run: |
+          JAR_PATH=$(ls build/libs/*.jar | head -1)
+          echo "jar_path=$JAR_PATH" >> $GITHUB_OUTPUT
+          echo "📁 JAR found: $JAR_PATH"
+
+      - name: 🌐 Publish to Modrinth & CurseForge
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          # Modrinth
+          modrinth-id: '3dAnWv1a'
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          
+          # CurseForge
+          curseforge-id: '1509449'
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          
+          # GitHub
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # Informations de version
+          name: 'Arsenal Légendaire Ultime ${{ github.ref_name }}'
+          version: '${{ github.ref_name }}'
+          version-type: 'release'
+          
+          files: ${{ steps.find-jar.outputs.jar_path }}
+          
+          loaders: |
+            fabric
+          game-versions: |
+            ${{ env.MINECRAFT_VERSION }}
+          java: |
+            ${{ env.JAVA_VERSION }}
+          
+          dependencies: |
+            fabric-api(required){modrinth:P7dR8mSH}{curseforge:306612}
+          
+          changelog-file: CHANGELOG.md
+          
+          retry-attempts: 3
+          retry-delay: 10000
+
+      - name: ✅ Publish complete
+        run: echo "🎉 Successfully published to CurseForge and Modrinth!"
