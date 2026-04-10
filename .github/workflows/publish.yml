@@ -50,9 +50,9 @@ jobs:
           modrinth-id: '3dAnWv1a'
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           
-          # CurseForge (DÉSACTIVÉ TEMPORAIREMENT)
-          # curseforge-id: '1509449'
-          # curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          # CurseForge
+          curseforge-id: '1509449'
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
           
           # GitHub
           github-token: ${{ secrets.GITHUB_TOKEN }}
