@@ -78,6 +78,12 @@ jobs:
           
           retry-attempts: 3
           retry-delay: 10000
-
+          
+      - name: 📦 Upload JAR as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Arsenal-Legendaire-JAR
+          path: build/libs/*.jar
+          
       - name: ✅ Publish complete
         run: echo "🎉 Successfully published to CurseForge and Modrinth!"
